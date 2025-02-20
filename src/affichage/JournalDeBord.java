@@ -16,6 +16,7 @@ public class JournalDeBord implements IAffichage{
         System.out.println(Nom);
     }
     
+    
     public void lancerJeu() {
         afficherTexte("**************************************************");
         afficherTexte("*                                                *");
@@ -33,18 +34,6 @@ public class JournalDeBord implements IAffichage{
         afficherTexte("*  Tes cartes de pirates sont prêtes à l'emploi  *");
         afficherTexte("**********************************************");
         afficherTexte("");
-
-
-
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        afficherTexte("Es-tu prêt à prendre le large ? L'aventure t'attend !");
-        afficherTexte("**********************************************");
-        afficherTexte("");
     }
 
 
@@ -56,5 +45,7 @@ public class JournalDeBord implements IAffichage{
             e.printStackTrace();
         }
     }
+    
+
 
 }

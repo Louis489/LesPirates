@@ -1,15 +1,19 @@
 package jeu;
 
 import affichage.JournalDeBord;
-import cartes.CartePopularite;
 import cartes.Cartes;
+import cartes.EnumCartes;
 
 public class TestJeu {
 
     public static void main(String[] args) {
-        Cartes cartePop = new CartePopularite("popularite", "blabla",3);
+    	
+    	
+    	Cartes discoursInspirant = EnumCartes.DISCOURS_INSPIRANT.getCarte();
         JournalDeBord journal = new JournalDeBord();
-        journal.afficherDescriptionCarte(cartePop);
+        journal.lancerJeu();
+        journal.afficherNomCarte(discoursInspirant.getNomCarte());
+        journal.afficherDescriptionCarte(discoursInspirant.getDescription());
     }
 }
 

@@ -1,5 +1,4 @@
 package cartes;
-import affichage.JournalDeBord;
 import affichage.IAffichage;
 
 public abstract class Cartes {
@@ -9,14 +8,14 @@ public abstract class Cartes {
 	private String description;
 
 	
-	public Cartes(String nomCarte,String description) {
+	public Cartes(String nomCarte, String description) {
 		this.nomCarte = nomCarte;
 		this.description = description;
 	}
 	
 	
 	
-	String getNomCarte(){
+	public String getNomCarte(){
 		return nomCarte;
 	}
 	

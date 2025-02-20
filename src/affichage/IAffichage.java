@@ -4,7 +4,10 @@ import cartes.Cartes;
 public interface IAffichage {
 	
 
-	void afficherDescriptionCarte(Cartes carte);
+	void afficherDescriptionCarte(String description);
+	
+    public void afficherNomCarte(String Nom);
+
 	    
 	    
 

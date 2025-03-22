@@ -44,7 +44,6 @@ public enum EnumCartes {
     ABANDON_CARGAISON(new CartesEvenement("Abandon de Cargaison", "Votre adversaire est contraint d'abandonner une cargaison, il doit défausser une carte.", "L'adversaire défausse une carte", 0, 0)),
     TEMPETE(new CartesEvenement("Tempête", "Une tempête frappe vos navires, chaque joueur perd 1 point de Vie.", "-1 Vie pour les deux pirates", -1,0)),
 	MAUVAISE_REPUTATION(new CartesEvenement("Mauvaise Réputation", "Une rumeur dévastatrice se répand, chaque joueur perd 1 point de popularité.", "-1 Popularité pour les deux pirates", 0, -1)),
-	
 	TRÉSOR_ENFOUI(new CartesEvenement("Trésor Enfoui", "Vous trouvez un trésor caché. Vous gagnez une carte supplémentaire.", "Le joueur pioche une carte", 0, 0)),
 	EMBUSCADE(new CartesEvenement("Embuscade", "Vous tendez une embuscade à votre adversaire, lui faisant perdre une carte au hasard.", "L'adversaire défausse une carte aléatoire", 0, 0)),
 	AVENTURE_INATTENDUE(new CartesEvenement("Aventure Inattendue", "Vous êtes entraîné dans une aventure imprévue. Chaque joueur doit échanger toutes ses cartes.", "Les deux joueurs échangent toutes leurs cartes", 0, 0)),

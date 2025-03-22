@@ -1,16 +1,20 @@
 package cartes;
-import affichage.IAffichage;
+import pirate.Pirate;
+
 
 public abstract class Cartes {
 
 	private String nomCarte;
 
 	private String description;
+	
+	private String effet;
 
 	
-	public Cartes(String nomCarte, String description) {
+	public Cartes(String nomCarte, String description,String effet) {
 		this.nomCarte = nomCarte;
 		this.description = description;
+		this.effet = effet;
 	}
 	
 	
@@ -22,5 +26,11 @@ public abstract class Cartes {
     public String getDescription() {
         return description;
     }
+    
+    public String getEffet() {
+        return effet;
+    }
+    
+    public abstract void appliquerEffet(Pirate pirate);
 	
 }

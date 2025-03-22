@@ -9,6 +9,8 @@ import cartes.Cartes;
 public class CartesEvenement extends Cartes {
     private int effetVie;
     private int effetPopularite;
+	private int type = 3;//type événement 
+
 
     public CartesEvenement(String nomCarte, String description, String effet, int effetVie, int effetPopularite) {
         super(nomCarte, description, effet);
@@ -29,6 +31,10 @@ public class CartesEvenement extends Cartes {
     public int getEffetVie() {
         return effetVie;
     }
+    
+	public int getType() {
+		 return type;
+	}
 
     public int getEffetPopularite() {
         return effetPopularite;

@@ -31,6 +31,8 @@ public abstract class Cartes {
         return effet;
     }
     
+	public abstract int getType();
+    
     public abstract void appliquerEffet(Pirate pirate);
 	
 }

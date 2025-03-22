@@ -4,6 +4,8 @@ import pirate.Pirate;
 public class CartePopularite extends Cartes {
     private int pointPopularite;
     private int pointVie; // Ajout d'un champ pour les points de vie
+	private int type = 2;
+
 
     public CartePopularite(String nomCarte, String description, String effet, int pointPopularite, int pointVie) {
         super(nomCarte, description, effet);
@@ -28,4 +30,8 @@ public class CartePopularite extends Cartes {
     public int getPointVie() {
         return pointVie; 
     }
+    
+	 public int getType() {
+		 return type;
+	 }
 }

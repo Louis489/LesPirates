@@ -100,18 +100,17 @@ public class Jeu {
         // Affichage des cartes du joueur actif
         for (int i = 0; i < mainJoueurActif.size(); i++) {
             Cartes carte = mainJoueurActif.get(i);
-            int type = (carte instanceof CartesAttaque) ? 1 : (carte instanceof CartePopularite) ? 2 : 3;
-            journal.afficherCarte((i + 1), carte.getNomCarte(), carte.getEffet(), type);
+            journal.afficherCarte((i + 1), carte.getNomCarte(), carte.getEffet(), carte.getType());
         }
 
         journal.afficherChoixCarte(mainJoueurActif.size());
         int choix = scanner.nextInt();
 
         if (choix >= 1 && choix <= mainJoueurActif.size()) {
-            Cartes carteChoisie = mainJoueurActif.remove(choix - 1); // Jouer la carte et la retirer de la main
+            Cartes carteChoisie = mainJoueurActif.remove(choix-1); // Jouer la carte et la retirer de la main
             journal.afficherDescriptionCarte(carteChoisie.getDescription());
 
-            if (carteChoisie instanceof CartesAttaque) {
+            if (carteChoisie.getType() == 1) {
                 CartesAttaque carteAttaqueChoisie = (CartesAttaque) carteChoisie;
                 carteAttaqueChoisie.appliquerEffet(adversaire);
 
@@ -122,7 +121,7 @@ public class Jeu {
                 if (carteAttaqueChoisie.getPointPopularite() != 0) {
                     journal.afficherPertePopularite(adversaire.getNom(), carteAttaqueChoisie.getPointPopularite());
                 }
-            } else if (carteChoisie instanceof CartePopularite) {
+            } else if (carteChoisie.getType() == 2) {
                 CartePopularite cartePopulariteChoisie = (CartePopularite) carteChoisie;
                 cartePopulariteChoisie.appliquerEffet(joueurActif);
 
@@ -133,7 +132,7 @@ public class Jeu {
                 if (cartePopulariteChoisie.getPointVie() != 0) {
                     journal.afficherPerteVie(joueurActif.getNom(), cartePopulariteChoisie.getPointVie());
                 }
-            } else if (carteChoisie instanceof CartesEvenement) {
+            } else if (carteChoisie.getType() == 3) {
                 CartesEvenement carteEvenementChoisie = (CartesEvenement) carteChoisie;
                 carteEvenementChoisie.traiterEvenement(carteEvenementChoisie, joueurActif, adversaire, mainJoueurActif, mainAdversaire, pioche, journal);
             }

@@ -142,11 +142,11 @@ public class JournalDeBord implements IJournalDeBord {
         afficherTexte("Bonne chance, Capitaine " + nomPirate + " ! Que la meilleure ruse de pirate l'emporte !");
         afficherTexte("");
     }
-    // Méthode pour afficher une ligne de texte avec une pause entre chaque ligne, mais sans afficher caractère par caractère
+    // Méthode pour afficher une ligne de texte avec une pause entre chaque ligne
     private void afficherTexte(String texte) {
-        System.out.println(texte);  // Affichage immédiat de la ligne complète
+        System.out.println(texte);
         try {
-            Thread.sleep(100);  // Pause rapide entre les lignes (100 ms)
+            Thread.sleep(100);  // Pause rapide entre les lignes 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

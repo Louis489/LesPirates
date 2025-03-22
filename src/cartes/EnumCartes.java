@@ -2,7 +2,7 @@ package cartes;
 
 public enum EnumCartes {
 
-    // Cartes de Popularité
+    // Cartes de Popularités
 	DISCOURS_INSPIRANT(new CartePopularite("Discours Inspirant", "Vous prononcez un discours galvanisant qui renforce la loyauté de votre équipage.", "+1 Popularité", 1, 0)),
 	MAIN_DE_FER(new CartePopularite("Main de Fer", "Vous imposez votre volonté d'une main de fer, forçant le respect de tous.", "+2 Popularité, -1 Vie", 2, -1)),
 	REVOLTE_ORGANISEE(new CartePopularite("Révolte Organisée", "Vous orchestrez un soulèvement, gagnant ainsi le soutien de votre équipage.", "+1 Popularité", 1, 0)),
@@ -20,7 +20,7 @@ public enum EnumCartes {
 	RECRUTEMENT_PUISSANT(new CartePopularite("Recrutement Puissant", "Vous recrutez des pirates légendaires, augmentant votre prestige.", "+2 Popularité", 2, 0)),
 
 
-    // Cartes d'Attaque
+    // Cartes d'Attaques
     COUP_DE_SABRE(new CartesAttaque("Coup de Sabre", "Vous portez un coup de sabre précis, infligeant de lourdes pertes à l'ennemi.", "-2 Vie et -1 Popularité", -2, -1)),
     CANONNEE(new CartesAttaque("Canonnée", "Vous déchargez vos canons et endommagez gravement le navire adverse.", "-3 Vie", -3, 0)),
     TRAITRISE(new CartesAttaque("Traîtrise", "Vous trahissez votre adversaire avec un coup bas, réduisant sa popularité.", "-1 Popularité", 0, -1)),
@@ -38,7 +38,7 @@ public enum EnumCartes {
     GRENADE(new CartesAttaque("Grenade", "Vous lancez une grenade et détruisez une partie de l'équipage adverse.", "-3 Vie et -2 Popularité", -3, -2)),
 
 
-    // Cartes Événement
+    // Cartes Événements
     FOURBE_MANOEUVER(new CartesEvenement("Manœuvre Sournoise", "Vous surprenez votre adversaire et échangez une carte avec lui.", "Les deux joueurs échangent une carte", 0, 0)),
     CADEAU_DU_DESTIN(new CartesEvenement("Cadeau du Destin", "Un marchand bienveillant vous offre une cargaison précieuse, vous pouvez regarder la main de votre adversaire.", "Le joueur peut regarder la main de son adversaire", 0, 0)),
     ABANDON_CARGAISON(new CartesEvenement("Abandon de Cargaison", "Votre adversaire est contraint d'abandonner une cargaison, il doit défausser une carte.", "L'adversaire défausse une carte", 0, 0)),

@@ -4,7 +4,6 @@ import pirate.Pirate;
 import java.util.List;
 import java.util.ArrayList;
 import affichage.JournalDeBord;
-import cartes.Cartes;
 
 public class CartesEvenement extends Cartes {
     private int effetVie;

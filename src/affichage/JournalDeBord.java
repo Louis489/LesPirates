@@ -73,12 +73,6 @@ public class JournalDeBord implements IJournalDeBord {
     }
 
 
-
-    @Override
-	public String afficherEffetCarte(String effet) {
-        return effet;
-    }
-
     @Override
 	public void afficherNomCarte(String nom) {
     	afficherTexte(nom);

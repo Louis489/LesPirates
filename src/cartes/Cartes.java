@@ -17,8 +17,6 @@ public abstract class Cartes {
 		this.effet = effet;
 	}
 	
-	
-	
 	public String getNomCarte(){
 		return nomCarte;
 	}

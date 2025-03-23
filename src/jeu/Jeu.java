@@ -9,16 +9,16 @@ import cartes.EnumCartes;
 import pirate.Pirate;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Jeu {
 
     public static void main(String[] args) {
 
         List<Cartes> pioche = creerPioche();
-        Collections.shuffle(pioche);
+        MelangerCartes(pioche);
 
         List<Cartes> mainJoueur1 = new ArrayList<>();
         List<Cartes> mainJoueur2 = new ArrayList<>();
@@ -59,6 +59,17 @@ public class Jeu {
             }
 
             tour++;
+        }
+    }
+    
+    
+    private static void MelangeCartes(List<Cartes> pioche) {
+        Random random = new Random();
+        for (int i = pioche.size() - 1; i > 0; i--) {
+            int index = random.nextInt(i + 1);
+            Cartes carteTemp = pioche.get(i);
+            pioche.set(i, pioche.get(index));
+            pioche.set(index, carteTemp);
         }
     }
 

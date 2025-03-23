@@ -31,15 +31,13 @@ public interface IJournalDeBord {
 
 	void afficherDescriptionCarte(String description);
 
-	String afficherEffetCarte(String effet);
-
 	void afficherNomCarte(String nom);
 
 	void afficherCarte(int numero, String nomCarte, String effetCarte, int type);
 
 	void afficherInfosPirate(String nom, int vie, int popularite);
 
-	String getNomPirate();
+	String getNomPirate();//retourne un String pour recuperer le nom du joueur mais ne l'affiche pas 
 
 	void lancerJeu();
 
